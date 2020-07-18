@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf=8">
+  <meta name="wiew" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+	<title>Weather Predictor</title>
+	<link rel="stylesheet" type="text/css" href="static/styles.css">
+	<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="content">
+		<h2 class="content_heading"><span class="heading_font">Weather Predictor</span></h2>
+	</div>
+
+<div class="content_table">
+      <form action="{{url_for('predict')}}" method="POST">
+<p><strong>City Name:</strong></p>
+<p><input class="input_line" type="text" name="name"/></p>
+<p><input type="Submit" class="button"   value="Submit"></p>
+</form>
+
+</div>
+    <div id= "left_m" class="col-md-3">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          {% block content %}{% endblock %}
+  </div>
+<div class="footer">
+	<p class="footer_des">Made by Nithya Prasath😎💙</p>
+</div>
+
+</body>
+</html>

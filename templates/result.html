@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf=8">
+	<meta name="wiew" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+	<title>Weather Predictor</title>
+	<link rel="stylesheet" type="text/css" href="static/styles.css">
+	<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="content">
+		<h2 class="content_heading"><span class="heading_font">Weather Predictor</span></h2>
+	</div>
+<div class="result">
+<h3>Location Details :</h3>
+    <p><b>Country</b> : {{data["count"]}}</p>
+    <p><b>Latitude</b> : {{data["lat"]}}</p>
+    <p><b>Longitude</b> : {{data["lon"]}}</p>
+    <p><b>Local Time</b> : {{data["local_time"]}}</p>
+    <p><b>Observation Time</b> : {{data["observation_time"]}}
+    <hr>
+    <h3><b>Weather Details</b> : </h3>
+    <p><b>Temperature</b> : {{ data["temp"]}} Celsius</p>
+    <p><b>Pressure</b> : {{data["pressure"]}} mb</p>
+    <p><b>Humidity</b> : {{data["humidity"]}}%</p>
+    <p><b>Precipitation</b> : {{data["precipitation"]}}</p>
+    <p><b>Cloud Cover</b> : {{data["cloud_cover"]}}</p>
+    <p><b>UV Index</b> : {{data["uv_index"]}}</p>
+    <p><b>Day/Night</b> : {{data["is_day"]}}</p>
+    <p><b>Wind Direction</b> : {{data["wind_dir"]}}</p>
+    <p><b>Wind Degree</b> : {{data["wind_deg"]}}</p>
+    <p><b>Wind_mph</b> : {{data["wind_mph"]}} km/hr</p>
+
+</div>
+
+<div class="footer">
+	<p class="footer_des">Made by Nithya Prasath😎💙</p>
+</div>
+
+</body>
+</html>
